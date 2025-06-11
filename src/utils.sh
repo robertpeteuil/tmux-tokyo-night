@@ -15,6 +15,7 @@ function get_tmux_option() {
 function generate_left_side_string() {
 
 	session_icon=$(get_tmux_option "@theme_session_icon" " ")
+  host_icon=$(get_tmux_option "@theme_host_icon" " ")
 	left_separator=$(get_tmux_option "@theme_left_separator" "")
 	transparent=$(get_tmux_option "@theme_transparent_status_bar" "false")
 
@@ -24,7 +25,7 @@ function generate_left_side_string() {
 		local separator_end="#[bg=${PALLETE[bg_highlight]}]#{?client_prefix,#[fg=${PALLETE[yellow]}],#[fg=${PALLETE[green]}]}${left_separator:?}#[none]"
 	fi
 
-	echo "#[fg=${PALLETE[fg_gutter]},bold]#{?client_prefix,#[bg=${PALLETE[yellow]}],#[bg=${PALLETE[green]}]} ${session_icon} #S ${separator_end}"
+	echo "#[bg=${PALLETE['blue']},fg=${PALLETE['white']}] ${host_icon}#H #[fg=${PALLETE[fg_gutter]},bold]#{?client_prefix,#[bg=${PALLETE[yellow]}],#[bg=${PALLETE[green]}]}${session_icon} #S ${separator_end}"
 }
 
 function generate_inactive_window_string() {
