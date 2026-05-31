@@ -14,7 +14,7 @@ theme_disable_plugins=$(get_tmux_option "@theme_disable_plugins" 0)
 . "$CURRENT_DIR/palletes/$theme_variation.sh"
 
 ### Load Options
-border_style_active_pane=$(get_tmux_option "@theme_active_pane_border_style" "${PALLETE['dark5']}")
+border_style_active_pane=$(get_tmux_option "@theme_active_pane_border_style" "${PALLETE['blue0']}")
 border_style_inactive_pane=$(get_tmux_option "@theme_inactive_pane_border_style" "${PALLETE[bg_highlight]}")
 right_separator=$(get_tmux_option "@theme_right_separator" "")
 transparent=$(get_tmux_option "@theme_transparent_status_bar" "false")
